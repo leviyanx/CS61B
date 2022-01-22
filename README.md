@@ -1,6 +1,6 @@
 # CS61B
 
-这是我上CS61B课程用的代码仓库。（CS61B: Data Structures and Algorithms）
+这是我上2018春季CS61B课程用的代码仓库。（CS61B: Data Structures and Algorithms）
 
 课程简介
 
