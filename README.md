@@ -7,11 +7,17 @@
 - 编程语言：Java
 - 课程网站：https://sp18.datastructur.es/
 
-HW
+Week1
 
-Lab
+- Lab1: javac, java, git
 
-Project
+Week2
+
+- Project0: NBody
+
+Week3
+
+- Lab3: Testing, Debugging
 
 ## 参考
 
