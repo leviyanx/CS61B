@@ -81,6 +81,13 @@ public class IntList {
      */
 
     public static IntList dcatenate(IntList A, IntList B) {
+        if (A == null && B == null)
+            return A;
+        else if (A == null && B != null)
+            return B;
+        else if (A != null && B == null)
+            return A;
+
         IntList startA = A; // point the start of A
 
         // reach the end element of A
@@ -98,23 +105,31 @@ public class IntList {
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      */
     public static IntList catenate(IntList A, IntList B) {
-        //TODO:  fill in method
-        IntList startA = A; // point the start of A
+        if (A == null && B == null)
+            return A;
+        else if (A == null && B != null)
+            return B;
+        else if (A != null && B == null)
+            return A;
 
-        // reach the end element of A
+        // copy A
+        IntList A1 = new IntList(A.first, null);
+        IntList startA1 = A1; // start of A1
         while (A.rest != null) {
             A = A.rest;
+            A1.rest = new IntList(A.first, null);
+            A1 = A1.rest;
         }
 
-        // link A and B
-        A.rest = new IntList(B.first, null);
+        // copy B after A
+        A1.rest = new IntList(B.first, null);
         while (B.rest != null) {
            B = B.rest;
-           A = A.rest;
-           A.rest = new IntList(B.first, null);
+           A1 = A1.rest;
+           A1.rest = new IntList(B.first, null);
         }
 
-        return startA;
+        return startA1;
     }
 
 
